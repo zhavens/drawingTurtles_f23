@@ -1,10 +1,10 @@
 import inspect
 
 def callAlphabet():
-	if ("drawA" in dir()):
-		drawA()
+	if ("drawE" in dir()):
+		drawE()
 	else:
-		print("no A yet")
+		print("no E yet")
 
 def main():
 	print("Start Alphabet")
