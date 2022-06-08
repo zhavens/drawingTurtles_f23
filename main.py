@@ -1,29 +1,41 @@
 import sys
 import os
 import string
-import studentcode.E as E
+import importlib
+import turtlehelper as th
 
+# Set up an Array A,B,C,D...
 alphabet_string = string.ascii_uppercase
 alphabet = list(alphabet_string)
 
-# for letter in alphabet: 
-# 	try:
-# 		import studentcode.E as E
-# 	except ImportError:
-#		print('import file, no file E')
+sentence_string = "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
+sentence = list(sentence_string.strip()) # trim whitespace
+
+# Try to import all the files if they exist
+for letter in alphabet:
+	module_path = os.path.join("studentcode", letter + ".py")
+	if os.path.exists(module_path):
+		# Import and load the module from file
+		spec = importlib.util.spec_from_file_location(letter,module_path)
+		module = importlib.util.module_from_spec(spec)
+		spec.loader.exec_module(module)
+
+		# Set the module to a variable with its letter name
+		setattr(sys.modules[__name__], letter, module)
 
 def main():
+	th.start()
 	thismodule = sys.modules[__name__]
-	for letter in alphabet:
+	index = 0
+	for index in range(len(sentence)):
 		try:
-			func = getattr(thismodule, letter)
-			func.draw()
+			if sentence[index] != ' ':
+				clas = getattr(thismodule, sentence[index])
+				clas.draw()
 		except:
-			print('no ' + letter)
-
-print("Start Alphabet")
+			th.drawSquare()
+			print(sentence[index] + " not yet implemented")
+		th.drawOffset()
+		th.checkNewLine(index, sentence)
+	th.stop()
 main()
-print("End Alphabet")
-
-
-
