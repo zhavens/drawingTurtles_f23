@@ -3,7 +3,7 @@ import settings as s
 
 def draw():
     starting_pos = s.yertle.pos()
-
+#ITS A P SO JUST FORWARD, TURN RIGHT,  FORWARD, TURN, FORWARD, THEN TURN, THEN GO UP, AND ALLL THE WAY DOWN
     s.yertle.forward(s.BOX_WIDTH)
     s.yertle.right(90)
     s.yertle.forward(s.BOX_HEIGHT/2)
