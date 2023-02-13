@@ -4,14 +4,18 @@ import string
 import importlib
 import turtlehelper as th
 
-# Set up an Array A,B,C,D...
+# Set up aa list of letters [A,B,C,D...]
 alphabet_string = string.ascii_uppercase
 alphabet = list(alphabet_string)
 
+# This is the sentence we are writing out
 sentence_string = "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
 sentence = list(sentence_string.strip()) # trim whitespace
 
 # Try to import all the files if they exist
+# This loop goes through each letter looking for a file A.py, B.py etc etc
+# If it finds it, it will load your file into the project
+
 for letter in alphabet:
 	module_path = os.path.join("studentcode", letter + ".py")
 	if os.path.exists(module_path):
@@ -22,6 +26,10 @@ for letter in alphabet:
 
 		# Set the module to a variable with its letter name
 		setattr(sys.modules[__name__], letter, module)
+
+# main function()
+# A list of letters are imported from the loop above and
+# the code will run the draw() from the existing letter python files
 
 def main():
 	th.start()
