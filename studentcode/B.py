@@ -8,10 +8,10 @@ def draw():
         # use s.yertle as your turtle everywhere, no need to make a new turtle
         # this line gets me the turtles current position
         ### (PRE CONDITION: top left of a bounding box) ###
-	starting_pos = s.yertle.pos()
+        starting_pos = s.yertle.pos()
 
         # using s. [box sizes], I draw my letter WITHIN the bounding box
-	s.yertle.forward(s.BOX_WIDTH/1.5)
+        s.yertle.forward(s.BOX_WIDTH/1.5)
         s.yertle.right(90)
         s.yertle.forward(s.BOX_HEIGHT/2)
         s.yertle.right(90)
@@ -33,10 +33,10 @@ def draw():
         # Turtle facing correct direction in top left stop
         # so that next letter knows where
         # the correct position in.
-	s.yertle.penup()
-	s.yertle.setpos(starting_pos)
-	s.yertle.setheading(0)
-	s.yertle.pendown()
+        s.yertle.penup()
+        s.yertle.setpos(starting_pos)
+        s.yertle.setheading(0)
+        s.yertle.pendown()
 
         # Feel free to use any part of this code as a template for your letter
         # know that you can access the box width and height with s.BOX_WIDTH and s.BOX_HEIGHT
