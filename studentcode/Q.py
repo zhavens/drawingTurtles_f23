@@ -32,7 +32,7 @@ def draw():
     s.yertle.forward(s.BOX_WIDTH*4/5)
     s.yertle.right(90)
     s.yertle.forward(s.BOX_HEIGHT*4/5)
-    s.yertle.left(30
+    s.yertle.left(30)
     s.yertle.forward(10)
     s.yertle.left(180)
     s.yertle.pendown()

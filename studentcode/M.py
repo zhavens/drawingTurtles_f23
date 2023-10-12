@@ -32,8 +32,6 @@ def draw():
     s.yertle.setheading(0)
     s.yertle.pendown()
 
-
-    draw()
     # Feel free to use any part of this code as a template for your letter
     # know that you can access the box width and height with s.BOX_WIDTH and s.BOX_HEIGHT
     # and you can access the turtle you need to draw with s.yertle.ANYFUNCTIONHERE()
