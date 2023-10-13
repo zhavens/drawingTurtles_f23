@@ -1,4 +1,4 @@
-# your file must include these 2 imports
+
 ###### Aidan and David ######
 # your file must include these 2 imports
 import turtle
@@ -47,16 +47,6 @@ def draw():
         # Turtle facing correct direction in top left stop
         # so that next letter knows where
         # the correct position in.
-        s.yertle.penup()
-        s.yertle.setpos(starting_pos)
-        s.yertle.setheading(0)
-        s.yertle.pendown()
-
-        # Feel free to use any part of this code as a template for your letter
-        # know that you can access the box width and height with s.BOX_WIDTH and s.BOX_HEIGHT
-        # and you can access the turtle you need to draw with s.yertle.ANYFUNCTIONHERE()
-        # you will need the two imports from the top and you need to put ALL your code in a
-        # def draw() function
-
+        
 
 
